@@ -16,9 +16,10 @@ Thumbs.db
 
 __pycache__/
 
-# Documentation : seuls le PDF et le schéma (affiché dans le README) sont publiés
+# Documentation : seuls le PDF, le schéma et les images du README sont publiés
 /docs/*
 !/docs/schema_cablage.svg
+!/docs/images/
 !/docs/latex/
 /docs/latex/*
 !/docs/latex/ESP32_Audio_FX_effets.pdf

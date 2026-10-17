@@ -21,9 +21,16 @@
 
 Le son arrive en **Bluetooth (A2DP)** depuis un téléphone ou un ordinateur, traverse une **chaîne de 15 effets** réordonnable et ressort en **I2S 32 bits** sur un DAC **PCM5102**. Un écran **ST7735** affiche des menus colorés et animés ainsi que le **spectre FFT** du signal de sortie. Quatre potentiomètres règlent les paramètres en direct, quatre boutons pilotent la navigation.
 
+<div align="center">
+
+<img src="docs/images/demo.gif" width="480" alt="Démonstration de l'interface : démarrage, spectre, menu, liste et pages des effets">
+
+</div>
+
 ## Sommaire
 
 - [Fonctionnalités](#-fonctionnalités)
+- [Aperçu de l'écran](#-aperçu-de-lécran)
 - [Matériel](#-matériel)
 - [Câblage](#-câblage)
 - [Installation](#-installation)
@@ -44,6 +51,16 @@ Le son arrive en **Bluetooth (A2DP)** depuis un téléphone ou un ordinateur, tr
 | 🌈 **Interface animée** | Carrousel, transitions, boutons rotatifs animés, visualisation propre à chaque effet, ~33 fps |
 | 🔇 **Sans clic** | Fondu de 30 ms à l'activation / désactivation, lissage des paramètres |
 | ⚡ **Temps réel** | Traitement flottant par blocs de 128 trames, ~9 % de CPU, tampon anti-gigue de 32 Ko |
+
+## 📸 Aperçu de l'écran
+
+| Démarrage | Spectre (courbe) | Spectre (barres) |
+|:---:|:---:|:---:|
+| <img src="docs/images/01_demarrage.png" width="240" alt="Animation de démarrage"> | <img src="docs/images/02_spectre_courbe.png" width="240" alt="Spectre en courbe"> | <img src="docs/images/03_spectre_barres.png" width="240" alt="Spectre en barres"> |
+| **Spectre (cascade)** | **Menu carrousel** | **Liste des effets** |
+| <img src="docs/images/04_spectre_cascade.png" width="240" alt="Spectrogramme en cascade"> | <img src="docs/images/05_menu.png" width="240" alt="Menu principal"> | <img src="docs/images/06_liste_effets.png" width="240" alt="Liste des effets"> |
+| **Chaîne d'effets** | **Informations système** | **Volume (potentiomètre 1)** |
+| <img src="docs/images/08_chaine.png" width="240" alt="Chaîne des effets actifs"> | <img src="docs/images/09_infos.png" width="240" alt="Écran d informations"> | <img src="docs/images/10_volume.png" width="240" alt="Popup de volume"> |
 
 ## 🧰 Matériel
 
@@ -147,6 +164,21 @@ Au démarrage, l'appareil apparaît en Bluetooth sous le nom **ESP32-FX**. Appai
 | **Temporels** | Delay | Temps · Feedback · Mix · Stéréo / Ping-pong |
 | | Reverb (Freeverb) | Taille · Amorti · Largeur · Mix |
 | **Sortie** | Master *(toujours actif)* | Volume · Balance · Largeur stéréo · Limiteur |
+
+<details open>
+<summary><b>Pages des effets</b> : chaque effet a sa visualisation et ses 4 boutons rotatifs</summary>
+
+| **High Pass** | **Low Pass** | **Band Pass** | **EQ 3 bandes** |
+|:---:|:---:|:---:|:---:|
+| <img src="docs/images/fx_01_high_pass.png" width="180" alt="Page High Pass"> | <img src="docs/images/fx_02_low_pass.png" width="180" alt="Page Low Pass"> | <img src="docs/images/fx_03_band_pass.png" width="180" alt="Page Band Pass"> | <img src="docs/images/fx_04_eq_3_bandes.png" width="180" alt="Page EQ 3 bandes"> |
+| **Compressor** | **Distortion** | **Bitcrusher** | **Ring Mod** |
+| <img src="docs/images/fx_05_compressor.png" width="180" alt="Page Compressor"> | <img src="docs/images/fx_06_distortion.png" width="180" alt="Page Distortion"> | <img src="docs/images/fx_07_bitcrusher.png" width="180" alt="Page Bitcrusher"> | <img src="docs/images/fx_08_ring_mod.png" width="180" alt="Page Ring Mod"> |
+| **Tremolo** | **AutoPan** | **Phaser** | **Flanger** |
+| <img src="docs/images/fx_09_tremolo.png" width="180" alt="Page Tremolo"> | <img src="docs/images/fx_10_autopan.png" width="180" alt="Page AutoPan"> | <img src="docs/images/fx_11_phaser.png" width="180" alt="Page Phaser"> | <img src="docs/images/fx_12_flanger.png" width="180" alt="Page Flanger"> |
+| **Chorus** | **Delay** | **Reverb** | **Master** |
+| <img src="docs/images/fx_13_chorus.png" width="180" alt="Page Chorus"> | <img src="docs/images/fx_14_delay.png" width="180" alt="Page Delay"> | <img src="docs/images/fx_15_reverb.png" width="180" alt="Page Reverb"> | <img src="docs/images/fx_16_master.png" width="180" alt="Page Master"> |
+
+</details>
 
 ## 📘 Documentation
 
