@@ -1,0 +1,33 @@
+# PlatformIO : compilation et librairies téléchargées
+.pio/
+.pioenvs/
+.piolibdeps/
+
+# Éditeurs
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+
+# Système
+.DS_Store
+Thumbs.db
+
+__pycache__/
+
+# Documentation : seuls le PDF et le schéma (affiché dans le README) sont publiés
+/docs/*
+!/docs/schema_cablage.svg
+!/docs/latex/
+/docs/latex/*
+!/docs/latex/ESP32_Audio_FX_effets.pdf
+
+# LaTeX : fichiers intermédiaires
+*.aux
+*.log
+*.toc
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
